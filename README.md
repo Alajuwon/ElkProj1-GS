@@ -8,7 +8,7 @@ https://github.com/Alajuwon/ElkProj1-GS/blob/cb2e3edb018ba09c8188280f8e12d337ce0
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configuration file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: install-elk.yml_
+  - install-elk.yml_
 
 This document contains the following details:
 - Description of the Topologu
@@ -24,21 +24,23 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly secure, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-Load Balancers protect the server and reroutes traffic to another server to monitor traffic from potential DDOS attacks. A jump-box keeps the VMs IP addresses from public exposure. 
+- What aspect of security do load balancers protect? What is the advantage of a jump box?
+Load Balancers protect the server and reroutes traffic to another server to monitor traffic from potential DDOS attacks. 
+A jump-box keeps the VMs IP addresses from public exposure. 
+
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Network and system logs.
-- _TODO: What does Filebeat watch for?_ Data for the file system
-- _TODO: What does Metricbeat record?_  Machine metrics
+- What does Filebeat watch for?_ Data for the file system
+- What does Metricbeat record?_  Machine metrics
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| DVWA-Web1| Azure    | 10.0.0.5   | Linux            |
-| DVWA-Web2| Azure    | 10.0.0.6   | Linux            |
-| Elk-Server|         | 10.1.0.4   | Linux            |
+| Name      | Function | IP Address | Operating System |
+|-----------|----------|------------|------------------|
+| Jump Box  | Gateway  | 10.4.0.4   | Linux            |
+| DVWA-Web1 | Azure    | 10.1.0.7   | Linux            |
+| DVWA-Web2 | Azure    | 10.1.0.8   | Linux            |
+| Elk-Server|          | 10.2.0.5   | Linux            |
 
 ### Access Policies
 
@@ -46,10 +48,10 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box Pro machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-- _TODO: Add whitelisted IP addresses_
+- azureuser@<IP Address> of Jump-Box
 
 Machines within the network can only be accessed by A home IP Addess.
-- _TODO: Which machine did you allow to access your ELK VM? WEB 1 What was its IP address?_10.0.0.5
+- _TODO: Which machine did you allow to access your ELK VM? WEB 1 What was its IP address?_    10.0.0.5
 
 A summary of the access policies in place can be found in the table below.
 
