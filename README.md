@@ -51,23 +51,24 @@ Only the Jump-Box Pro machine can accept connections from the Internet. Access t
 - azureuser@<IP Address> of Jump-Box
 
 Machines within the network can only be accessed by A home IP Addess.
-- _TODO: Which machine did you allow to access your ELK VM? WEB 1 What was its IP address?_    10.0.0.5
+- Allowed Web:1 machine to access my Elk VM with IP address 10.1.0.7
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No YES          | 10.0.0.5 10.0.0.6    |
-| Web1     |        NO           |   10.0.0.5           |
-| Web2     |        NO           |   10.0.0.6           |
+| Jump Box | Yes/No YES          | 10.1.0.7 10.1.0.8    |
+| Web1     |        NO           |   10.1.0.7           |
+| Web2     |        NO           |   10.1.0.8           |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_ Setting up ansible configuration using SSH! 
+- The main advantage of automating configuration with Ansible is setting it up using SSH configuration
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+
+ Setting up the Elk installation play explained
 - ... Install Docker 
 - ... Install Python
 - ... Increase the memory
@@ -81,12 +82,12 @@ https://github.com/Alajuwon/ElkProj1-GS/blob/cb2e3edb018ba09c8188280f8e12d337ce0
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
-Web-1: 10.0.0.5
-Web-2: 10.0.0.6
+List the IP addresses of the machines you are monitoring_
+Web-1: 10.1.0.7
+Web-2: 10.1.0.8
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+The Beats I successfully installed:
 - Metricbeat
 - Filebeat
 
@@ -101,11 +102,10 @@ SSH into the control node and follow the steps below:
 - Update the filebeat-configuration.yml file to include... The IP address with the IP address of your ELK machine
 - Run the playbook, and navigate to ELK server's IP from your web browser to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_ 
+
 The filebeat-playbook.YML file is the playbook file to be copied to /etc/filebeat/roles
-- _Which file do you update to make Ansible run the playbook on a specific machine? You update the filebeat-config.yml file. How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ Which ever IP address of the web1 or web2 you want to use
-- _Which URL do you navigate to in order to check that the ELK server is running?
+You update the filebeat-config.yml file, and which ever IP address of the web1 or web2 machine you want to use is where you specify.
+- The URL you navigate to to check the Elk server is running is:
  http://your-Elk-IP:5601/app/kibana
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
